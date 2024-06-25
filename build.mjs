@@ -13,20 +13,20 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-	name: chalk.white('           Tierney Cyren'),
-	handle: chalk.white('bitandbang'),
-	shorthandle: chalk.white('bnb'),
-	work: chalk.white('Principal Developer Advocate at Twilio (::)'),
-	twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-	mastodon: chalk.gray('https://mastodon.social/') + chalk.magenta('@bnb'),
-	npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-	github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-	linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-	web: chalk.cyan('https://bnb.im'),
-	npx: `${chalk.red('npx')} ${chalk.white('bitandbang')}`,
+	name: chalk.white('           KamoEllen'),
+	handle: chalk.white('kamoellen'),
+	shorthandle: chalk.white('k.e.k'),
+	work: chalk.white('FullStack Developer(::)'),
+	twitter: chalk.gray('https://twitter.com/') + chalk.cyan('kamogeloellenk'),
+	behance: chalk.gray('https://www.behance.net/') + chalk.magenta('kamoellenkganakga'),
+	npm: chalk.gray('https://npmjs.com/') + chalk.red('kamoellen'),
+	github: chalk.gray('https://github.com/') + chalk.green('kamoellen'),
+	linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('kamogelokganakga'),
+	web: chalk.cyan('https://kamo.website'),
+	npx: `${chalk.red('npx')} ${chalk.white('kamoellen')}`,
 	labelWork: chalk.white.bold('    Work:'),
 	labelTwitter: chalk.white.bold(' Twitter:'),
-	labelMastodon: chalk.white.bold('Mastodon:'),
+	labelbehance: chalk.white.bold('behance:'),
 	labelnpm: chalk.white.bold('     npm:'),
 	labelGitHub: chalk.white.bold('  GitHub:'),
 	labelLinkedIn: chalk.white.bold('LinkedIn:'),
@@ -39,7 +39,7 @@ const newline = '\n';
 const heading = `${data.name} / ${data.handle} / ${data.shorthandle}`;
 const working = `${data.labelWork}  ${data.work}`;
 const twittering = `${data.labelTwitter}  ${data.twitter}`;
-const mastodoning = `${data.labelMastodon}  ${data.mastodon}`;
+const behanceing = `${data.labelbehance}  ${data.behance}`;
 const npming = `${data.labelnpm}  ${data.npm}`;
 const githubing = `${data.labelGitHub}  ${data.github}`;
 const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`;
@@ -48,25 +48,25 @@ const carding = `${data.labelCard}  ${data.npx}`;
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output =
-	heading + // data.name + data.handle
+	heading + data.name + data.handle
 	newline +
 	newline + // Add one whole blank line
 	working +
-	newline + // data.labelWork + data.work
+	newline +  data.labelWork + data.work
 	twittering +
-	newline + // data.labelTwitter + data.twitter
-	mastodoning +
-	newline + // data.labelTwitter + data.twitter
+	newline + data.labelTwitter + data.twitter
+	behanceing +
+	newline + data.labelTwitter + data.twitter
 	npming +
-	newline + // data.labelnpm + data.npm
+	newline + data.labelnpm + data.npm
 	githubing +
-	newline + // data.labelGitHub + data.github
+	newline + data.labelGitHub + data.github
 	linkedining +
-	newline + // data.labelLinkedIn + data.linkedin
+	newline + data.labelLinkedIn + data.linkedin
 	webing +
 	newline +
-	newline + // data.labelWeb + data.web
-	carding; // data.labelCard + data.npx
+	newline + data.labelWeb + data.web
+	carding; data.labelCard + data.npx
 
 writeFileSync(
 	join(import.meta.dirname, 'bin/output'),
